@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// App.tsx
+import React, { useState } from 'react';
+import { ChakraProvider, Box } from '@chakra-ui/react';
+import { theme } from './theme';
+import Header from './components/Header';
+import Navigation from './components/Navigation';
+import About from './components/About';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
+import Education from './components/Education';
+import Footer from './components/Footer';
+import { personalInfo, experience, education, skills } from './data/resumeData';
 
-function App() {
+const App: React.FC = () => {
+  const [activeSection, setActiveSection] = useState('about');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider theme={theme}>
+      <Box minH="100vh" bg="gray.50">
+        <Header personalInfo={personalInfo} />
+        
+        <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
+        
+        <Box as="main" maxW="container.xl" mx="auto" px={6} py={8}>
+          {activeSection === 'about' && <About personalInfo={personalInfo} />}
+          {activeSection === 'experience' && <Experience experience={experience} />}
+          {activeSection === 'skills' && <Skills skills={skills} />}
+          {activeSection === 'education' && <Education education={education} />}
+        </Box>
+        
+        <Footer personalInfo={personalInfo} />
+      </Box>
+    </ChakraProvider>
   );
-}
+};
 
 export default App;
