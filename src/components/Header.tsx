@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ personalInfo }) => {
             {personalInfo.title}
           </Heading>
 
-          <HStack
+          <Stack
             mt={4}
             spacing={4}
             justify={{ base: "center", md: "flex-start" }}
@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ personalInfo }) => {
               <Phone size={16} />
               <Text>{personalInfo.phone}</Text>
             </HStack>
-          </HStack>
+          </Stack>
         </Box>
 
         <Stack direction={{ base: "column", sm: "row" }} spacing={4}>
