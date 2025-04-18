@@ -29,6 +29,11 @@ export interface Skills {
   other: string[];
 }
 
+export interface Links {
+  github: string;
+  linkedIn: string;
+}
+
 export const personalInfo: PersonalInfo = {
   name: "Jayelle May",
   title: "Full Stack Engineer",
@@ -88,3 +93,8 @@ export const skills: Skills = {
   devops: ["Terraform", "Google Cloud Platform", "Amazon Web Services"],
   other: ["ITIL Foundation Certification"]
 };
+
+export const links: Links = {
+  github: "https://github.com/jayelle-may",
+  linkedIn: "https://www.linkedin.com/in/jayelle-may/"
+}

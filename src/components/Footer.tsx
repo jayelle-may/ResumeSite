@@ -5,11 +5,10 @@ import {
   Text,
   Flex,
   Link,
-  HStack,
-  useColorModeValue
+  HStack
 } from '@chakra-ui/react';
 import { Mail, Github, Linkedin } from 'lucide-react';
-import { PersonalInfo } from '../data/resumeData';
+import { links, PersonalInfo } from '../data/resumeData';
 
 interface FooterProps {
   personalInfo: PersonalInfo;
@@ -45,14 +44,14 @@ const Footer: React.FC<FooterProps> = ({ personalInfo }) => {
             <Mail size={20} />
           </Link>
           <Link 
-            href="#"
+            href={links.github}
             _hover={{ color: 'brand.300' }}
             aria-label="GitHub"
           >
             <Github size={20} />
           </Link>
           <Link 
-            href="#"
+            href={links.linkedIn}
             _hover={{ color: 'brand.300' }}
             aria-label="LinkedIn"
           >
