@@ -8,6 +8,7 @@ import {
   Button,
   Stack,
   HStack,
+  Link,
 } from "@chakra-ui/react";
 import { Mail, Phone, Github, Linkedin } from "lucide-react";
 import ResumeButton from "./ResumeButton";
@@ -48,12 +49,34 @@ const Header: React.FC<HeaderProps> = ({ personalInfo }) => {
             justify={{ base: "center", md: "flex-start" }}
           >
             <HStack>
-              <Mail size={16} />
-              <Text>{personalInfo.email}</Text>
+              <Link
+                href={`mailto:${personalInfo.email}`}
+                display="flex"
+                alignItems="center"
+                _hover={{
+                  color: "brand.100",
+                  textDecoration: "none",
+                }}
+                isExternal
+              >
+                <Mail size={16} style={{ marginRight: "8px" }} />
+                <Text>{personalInfo.email}</Text>
+              </Link>
             </HStack>
             <HStack>
-              <Phone size={16} />
-              <Text>{personalInfo.phone}</Text>
+              <Link
+                href={`tel:${personalInfo.phone.replace(/[^\d+]/g, "")}`}
+                display="flex"
+                alignItems="center"
+                _hover={{
+                  color: "brand.100",
+                  textDecoration: "none",
+                }}
+                isExternal
+              >
+                <Phone size={16} style={{ marginRight: "8px" }} />
+                <Text>{personalInfo.phone}</Text>
+              </Link>
             </HStack>
           </Stack>
         </Box>
@@ -75,9 +98,7 @@ const Header: React.FC<HeaderProps> = ({ personalInfo }) => {
             bg="white"
             color="brand.700"
             _hover={{ transform: "translateY(-2px)", boxShadow: "md" }}
-            onClick={() =>
-              openInNewWindow(links.linkedIn)
-            }
+            onClick={() => openInNewWindow(links.linkedIn)}
           >
             LinkedIn
           </Button>
