@@ -44,15 +44,15 @@ export const personalInfo: PersonalInfo = {
 
 export const experience: Job[] = [
   {
-    role: "Associate Software Engineer",
+    role: "Software Engineer",
     company: "Best Buy",
     period: "January 2022 - Present",
     achievements: [
-      "Modernized a legacy PHP codebase using React, TypeScript, and AWS. Improved maintainability and enabled integrations with enterprise logging & reporting tools.",
+      "Modernized a legacy PHP codebase using React, TypeScript, and AWS. Improved maintainability and enabled integrations with enterprise logging & reporting tools. Reduced average ticket resolution time by 70%.",
       "Developed a full-stack internal web app to assist employees with part lookup and repair instructions, increasing repairs completed on first visit by 40%.",
-      "Designed and implemented CI/CD pipelines using GitHub Actions and AWS CDK.",
-      "Built data ingestion pipelines using AWS Lambda and GCP Feature Store.",
+      "Built data ingestion pipelines using AWS Lambda and GCP Feature Store. Enabled additional revenue stream responsible for $1,000,000+ annual",
       "Created infrastructure-as-code (IaC) solutions for legacy cloud environments.",
+      "Designed and implemented CI/CD pipelines using GitHub Actions and AWS CDK.  Increased weekly deployments by 250%.",
       "Optimized average page load of the local development environment, boosting performance by 783%.",
       "Building GCP features to combine BigQuery datasets to populate customer owned product views."
     ]
