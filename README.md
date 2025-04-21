@@ -15,24 +15,27 @@ A professional portfolio website for Jayelle May, Full Stack Engineer, built wit
 ```
 resume-website/
 ├── public/
+│   ├── index.css
 │   ├── index.html
+│   ├── Resume.pdf
 │   └── favicon.ico
 ├── src/
 │   ├── components/
+│   │   ├── About.tsx
+│   │   ├── Education.tsx
+│   │   ├── Experience.tsx
+│   │   └── Footer.tsx
 │   │   ├── Header.tsx
 │   │   ├── Navigation.tsx
-│   │   ├── About.tsx
-│   │   ├── Experience.tsx
 │   │   ├── Skills.tsx
-│   │   ├── Education.tsx
-│   │   └── Footer.tsx
 │   ├── data/
 │   │   └── resumeData.ts
-│   ├── theme.ts
 │   ├── App.tsx
 │   ├── index.tsx
+│   ├── theme.ts
 ├── package.json
 ├── tsconfig.json
+├── ty[es.d.ts]
 └── README.md
 ```
 
